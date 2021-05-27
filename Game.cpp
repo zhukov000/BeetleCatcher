@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game(string title, COORD size) {
+Game::Game(string title, COORD size): curFrame(0) {
 	wHnd = GetStdHandle(STD_OUTPUT_HANDLE);
 	rHnd = GetStdHandle(STD_INPUT_HANDLE);
 	std::tie(wWidth, wHeight) = std::tie(size.X, size.Y);
